@@ -1,5 +1,4 @@
 #!/bin/bash
-# https://github.com/pi-hole/docker-pi-hole/blob/master/README.md
 # Note: ServerIP should be replaced with your external ip.
 
 docker run -d \
