@@ -11,11 +11,11 @@ All files in this folder is also available on cloud in raw format. Latest change
 
 Pi-hole Docker image isn't come with python image. So we have to install python packages by traditional procedure:
 
-login-in to pihole docker container: docker exec -it phole bash
+**Login-in to pihole docker container:** `docker exec -it phole bash`
 
-- sudo apt install python3-pip ( which install python3 packages along with pip3)
+```sudo apt install python3-pip ( which install python3 packages along with pip3)```
 
 
-For Flask Framework installation:
+**For Flask Framework installation:**
 
-- sudo pip3 install Flask
+```sudo pip3 install Flask```
