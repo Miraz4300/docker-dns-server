@@ -1,12 +1,13 @@
 #!/bin/bash
 # Note: ServerIP should be replaced with your external ip.
+# Note: port:port is your private open port for virtual assistant integration
 
 docker run -d \
     --name pihole \
     -p 53:53/tcp -p 53:53/udp \  #DNS Port
     -p 80:80 \  #Pi-hole web interface
     -p 443:443 \  #pi-hole web interface
-    -p port:port \  #Port for calling web request
+    -p port:port \  #Port for calling web request. see "deepspacelab" folder for documentation
     -e TZ="Country/City" \ #Time zone of IP server address
     -v "$(pwd)/etc-pihole/:/etc/pihole/" \
     -v "$(pwd)/etc-dnsmasq.d/:/etc/dnsmasq.d/" \
