@@ -11,13 +11,13 @@ docker run -d \
     -e TZ="Country/City" \ #Time zone of IP server address
     -v "$(pwd)/etc-pihole/:/etc/pihole/" \
     -v "$(pwd)/etc-dnsmasq.d/:/etc/dnsmasq.d/" \
-    --dns=127.0.0.1 --dns=1.1.1.1 \
+    --dns=127.0.0.1 --dns=1.1.1.1 \ #local server resolver
     --restart=unless-stopped \
-    --hostname pi.hole \
+    --hostname pi.hole \ #can be changed to any name
     -e VIRTUAL_HOST="pi.hole" \
     -e PROXY_LOCATION="pi.hole" \
     -e ServerIP="ip_address" \ #Server IP
-    pihole/pihole:latest #Docker Image
+    pihole/pihole:latest #Docker Image of pi-hole
 
 printf 'Starting up pihole container '
 for i in $(seq 1 20); do

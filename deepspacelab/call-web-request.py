@@ -11,4 +11,4 @@ def action(deviceName):
             os.system('./unblockregex.sh')
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=portnumber)
+    app.run(host='0.0.0.0', port=privateportnumber)
