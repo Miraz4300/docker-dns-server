@@ -24,7 +24,7 @@ Pi-hole Docker image isn't come with python image. So we have to install python 
 
 ## How-to:
 
-**will be updated on 17-Aug-2020_**
+**_will be updated on 17-Aug-2020_**
 
 
 
