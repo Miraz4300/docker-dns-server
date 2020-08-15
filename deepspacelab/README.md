@@ -22,6 +22,9 @@ Pi-hole Docker image isn't come with python image. So we have to install python 
 
 
 
+## How-to:
+
+**will be updated on 17-Aug-2020**
 
 
 
@@ -30,4 +33,4 @@ Pi-hole Docker image isn't come with python image. So we have to install python 
 
 - [callreq.py](https://mirazdsl.blob.core.windows.net/docker-pihole/callreq.py)
 - [blockregex.sh](https://mirazdsl.blob.core.windows.net/docker-pihole/blockregex.sh)
-- [un](https://mirazdsl.blob.core.windows.net/docker-pihole/unblockregex.sh)
+- [unblockregex.sh](https://mirazdsl.blob.core.windows.net/docker-pihole/unblockregex.sh)
