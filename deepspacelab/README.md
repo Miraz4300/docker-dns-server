@@ -13,7 +13,7 @@ Pi-hole Docker image isn't come with python image. So we have to install python 
 
 **Login-in to pihole docker container:** `docker exec -it phole bash`
 
-```sudo apt install python3-pip ( which install python3 packages along with pip3)```
+```sudo apt install python3-pip``` ( which install python3 packages along with pip3)
 
 
 **For Flask Framework installation:**
@@ -24,7 +24,7 @@ Pi-hole Docker image isn't come with python image. So we have to install python 
 
 ## How-to:
 
-**will be updated on 17-Aug-2020**
+**will be updated on 17-Aug-2020_**
 
 
 
