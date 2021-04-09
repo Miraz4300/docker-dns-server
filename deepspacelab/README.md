@@ -1,5 +1,5 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/31l6ynm0a1fhr2vs/branch/master?svg=true)](https://ci.appveyor.com/project/mrpond/blockthespot/branch/master)
-![alt text](https://blob.deepspacelab.dev/trademark/deepspacelab.png "Deep Space Lab")
+![alt text](https://blob.deepspacelab.dev/trademark/Deepspacelab%20-%20Research%20&%20Development.png "Deep Space Lab")
 
 
 # Prerequisites:
