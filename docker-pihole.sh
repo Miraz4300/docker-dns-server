@@ -2,22 +2,26 @@
 # Note: ServerIP should be replaced with your external ip.
 # Note: port:port is your private open port for virtual assistant integration
 
+PIHOLE_BASE="${PIHOLE_BASE:-$(pwd)}"
+[[ -d "$PIHOLE_BASE" ]] || mkdir -p "$PIHOLE_BASE" || { echo "Couldn't create storage directory: $PIHOLE_BASE"; exit 1; }
+
+# Note: ServerIP should be replaced with your external ip.
 docker run -d \
     --name pihole \
-    -p 53:53/tcp -p 53:53/udp \  #DNS Port
-    -p 80:80 \  #Pi-hole web interface
-    -p 443:443 \  #pi-hole web interface
-    -p port:port \  #Port for calling web request. see "deepspacelab" folder for documentation
-    -e TZ="Country/City" \ #Time zone of IP server address
-    -v "$(pwd)/etc-pihole/:/etc/pihole/" \
-    -v "$(pwd)/etc-dnsmasq.d/:/etc/dnsmasq.d/" \
-    --dns=127.0.0.1 --dns=1.1.1.1 \ #local server resolver
+    -p 53:53/tcp -p 53:53/udp \
+    -p 80:80 \
+    -p 443:443 \
+    -p port:port \
+    -e TZ="America/New_York" \
+    -v "${PIHOLE_BASE}/etc-pihole/:/etc/pihole/" \
+    -v "${PIHOLE_BASE}/etc-dnsmasq.d/:/etc/dnsmasq.d/" \
+    --dns=127.0.0.1 --dns=1.1.1.1 \
     --restart=unless-stopped \
-    --hostname pi.hole \ #can be changed to any name
+    --hostname pi.hole \
     -e VIRTUAL_HOST="pi.hole" \
     -e PROXY_LOCATION="pi.hole" \
-    -e ServerIP="ip_address" \ #Server IP
-    pihole/pihole:latest #Docker Image of pi-hole
+    -e ServerIP="ip_address" \
+    pihole/pihole:latest
 
 printf 'Starting up pihole container '
 for i in $(seq 1 20); do
