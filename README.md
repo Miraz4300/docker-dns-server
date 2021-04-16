@@ -3,4 +3,4 @@
 
 
 
-### Author Portfolio: https://miraz4300.github.io/odd-portfolio/
+### Portfolio: https://miraz4300.github.io/odd-portfolio/
